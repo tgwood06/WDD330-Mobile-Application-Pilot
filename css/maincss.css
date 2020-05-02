@@ -1,3 +1,69 @@
-body{
-    background: lightblue;
+
+/*CSS WDD 330*/
+
+/** Reset **/
+* {
+    box-sizing: border-box;
+   
+} 
+
+
+/**HTML**/
+html {
+    background-color: grey;
+    height: 100%;
+
+}
+
+/*BODY*/
+body {
+    background-color: beige;
+    width: 95%;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/*HEADER*/
+header {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    background-color: burlywood;
+
+}
+.name {
+   
+}
+/*NAV*/
+.menu{
+    color: black;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    display: block;
+
+}
+nav ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+/*SUB MENU*/
+.submenu {
+    
+}
+
+/*MAIN*/
+main{
+    padding: 10px;
+    height: 100%;
+}
+
+img {
+    width: 100%;
 }

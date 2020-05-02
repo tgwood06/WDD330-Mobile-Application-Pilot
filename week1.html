@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Loops Conditional Statements Functions Variables Parameters Arrays Associative Arrays</title>
+    <title>JavaScript Basics</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/maincss.css" type="text/css" rel="stylesheet">
@@ -16,10 +16,10 @@
         <nav>
             <ul id="menu" class="top">
                 <li><a href="index.html">Home</a></li>
-                 <!--<li><a href="#">Topics</a>  use once I have navigation designed-->
+                <!--<li><a href="#">Topics</a>  use once I have navigation designed-->
                 <ul class="sub">
-                    <li><a href="week1.html">Topic 1</a></li>
-                    <li><a href="week2.html">Topic 2</a></li>
+                    <li><a href="week1.html">Week 1</a></li>
+                    <li><a href="week2.html">Week 2</a></li>
 
                 </ul>
                 </li>
@@ -27,11 +27,180 @@
         </nav>
     </header>
     <main>
-        <h1>Notes</h1>
-        <p>PLACE NOTES HERE</p>
+        <h1>Notes Week 1</h1>
+        <hr>
+       
+
+        <h2> Javascript</h2>
+        <h3>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h3>
+        <p>>1. Functions and events: (p16 doing stuff)</p>
+        <p>P17 “The grammar of the JavaScript language, called ‘the syntax’ by techies,
+            declares that functions all have the same structure. They
+            have a name, stuff that goes into the function, stuff that comes out
+            of the function, and stuff that makes up what the function does.
+            For a pork sausage factory function the structure would be
+            <ul>
+                <li>1. a name - makePorkSausages,</li>
+                <li> 2. stuff that goes in - pigs,</li>
+                <li> 3. stuff that comes out - pork sausages, and</li>
+                <li> 4. stuff that makes up what the factory does - chopping, filling, and
+                    a bunch of stuff no one really wants to know about.”</li>
+            </ul>
+        </p>
+        <h3>function theFunctionName(whatGoesIn)</h3>
+        <h5>Functions are what allow JavaScript to be used on website to become interactive. </h5>
+        <h5>2. Remembering User’s Info: (p35)</h5>
+        <h5>saveStory function p 43</h5>
+        <p> p 44 “When you want to get the user’s input from any input or text area
+            tag, you use the special word ‘value.’ When you want to show
+            something to a user, you use a section (see Section 1) and the special
+            word ‘innerHTML.’ So...if your dealing with an input or textarea
+            use value; a section, use innerHTML. Don’t get these mixed
+            up. If you do, your code will run without an error but your page
+            won’t get or display anything. Be careful. You’ll just have to remember
+            which word to use in these two different situations, input
+            or textarea use value and section uses innerHTML.”</p><br>
+
+        <p>.value and innerHTMl at end of line will either get the info from input (.value) or show the user
+            something
+            (.innerHTML)
+            KEY-VALUE PAIRS: The key idemtifies and the value is the info
+            Example: key=Student name and value=grade,phone etc
+            To get a story that is saved we use a “key”
+            p.45</p><br>
+        <img src="images/loadstory.png" alt="loadStory Function">
+        <p>localStorage and then recalled with getItem
+            setitem creates a new key/value pair</p>
+
+        <h5>3. Making Choice p 46</h5>
+        <p>If, else, else if</p><br>
+        <p>“w3schools”
+            <h5> A. Use the if statement to specify a block of JavaScript code to be executed if a condition is
+                true.
+                if (condition) {
+                // block of code to be executed if the condition is true
+                }</h5>
+            <h5> B. Use the else statement to specify a block of code to be executed if the condition is false.
+                if (condition) {
+                // block of code to be executed if the condition is true
+                } else {
+                // block of code to be executed if the condition is false
+                }</h5>
+
+            <h5>C. Use the else statement to specify a block of code to be executed if the condition is false.
+                if (condition) {
+                // block of code to be executed if the condition is true
+                } else {
+                // block of code to be executed if the condition is false
+                }</h5>
+
+            <h5> D. Use the else if statement to specify a new condition if the first condition is false.
+                Syntax
+                if (condition1) {
+                // block of code to be executed if condition1 is true
+                } else if (condition2) {
+                // block of code to be executed if the condition1 is false and condition2 is true
+                } else {
+                // block of code to be executed if the condition1 is false and condition2 is false
+                }</h5>
+        </p>
+
+        <p>p.54</p>
+        <p> If something can be done some user or
+            bunch of users will do it. If you and I don’t handle each situation
+            our users can put us in then it will be us, not them, that look silly.
+            Believe me, your life will be much simpler if you take care of as
+            many of these situations as you can think of BEFORE you ship a
+            product to your users.
+            <ul>
+                <li>1.Using null helps solve this problem</li>
+                <li>2.ParseInt: When you use JavaScript’s parseInt function you send in to it some
+                    text and it gives you back an integer</li>
+        </p><br>
+        </ul>
+        <h4>NaN p 56</h4>
+
+        <img src="images/NaN.png" alt="NaN">
+
+        <h5>Group and Loops: p. 65</h5>
+        <p> 1. Arrays = special object that hold key/value pairs, and the key is the index number. Index starts at 0
+        </p>
+        <p>2. For loop p 66</p>
+        <img src="images/groupsandloops.png" alt="groups and loops">
+        <p> The standard for loop parts when working with an array are:
+            <ul>
+                <li> 1. the for keyword</li>
+                <li> 2. a variable to keep track of the location you are at in the array,</li>
+                <li>3. a check to see if the loop should continue,</li>
+                <li>4. an update that increases the location tracking variable by one,</li>
+                <li> 5. the lines of code to execute every time you go around the loop,</li>
+            </ul>
+            lines 8 though 25 in Code Snippet 4.</p>
+
+
+        <h3>OPERATORS</h3>
+        <h5>W3schools.com</h5>
+        <a href="https://www.w3schools.com/js/default.asp">Visit W3School's Javascript tutorial</a>
+
+        <br>
+
+
+        <img src="images/jsArithmeticOperators.png" alt="arithmetic operator">
+
+        <img src="images/JsAssignmentOperators.png" alt="assignment operator">
+
+        <img src="images/JsComparisonOperators.png" alt="comparison operator">
+
+        <img src="images/jsLogicalOperators.png" alt=" logical operator">
+
+        <img src="images/jsTypeOperators.png" alt="type operator">
+
+        <img src="images/jsBitwiseOperators.png" alt="bitwise operator">
+
+
+        <h4>newDate() p72</h4>
+        <p> “The toLocaleString function that converted the date
+            and time stamp to a string already knows where you are and if it is
+            daylight savings time or not.”</p>
+
+
+
+
+
+        <h4> JSON: literal syntax, not an object.
+            p.74</h4>
+        <img src="images/json.png" alt="JSON">
+        <p></p>P74 “JSON (Javascript Object Notation). Basically, if
+        the string wasn’t created by some pre-written JSON code, a JSON
+        library in techie speak, or by a person who knows the standard
+        very well, JSON.parse can’t understand the string and will fail.
+        This means you have to be very careful if you are typing in the
+        strings yourself. Thankfully, in JavaScript the JSON library has a
+        way to create those strings for you. You’ll see how to do that when
+        you get to line 21.”</p><br>
+
+        <h4>SEC 6 Representing Things p 91</h4>
+        <h6>An associative array p.92 </h6>
+        <p>associates a variable with an attribute list, the name of an associative array’s
+            attribute its ‘key’</p><br>
+
+        <p> Adding *1 = p96 * 1’. “If you multiply
+            the text the user enters by the number 1, JavaScript will convert
+            the text to a number! That’s nice. I’ve seen a lot of other languages
+            where it was a lot harder than that.”</p><br>
+
+        <h3> REWIRING YOUR BRAIN VIDEOS SITEPOINT</h3>
+        <p> In the videos about rewiring our brain, I think I have already done most of what was mentioned, and I
+            believe most people nowadays know mobile devices aren’t going anywhere. Start Small and scale up, keep it
+            simple. Design UX with users needs, keep in mind ease of use and easy to reach areas on a screen,
+            “reachability” use an href to make a number into a way to call from the page, no more copy and paste
+            numbers, reduce and optimize data and images. Overall I understand it is all about ease and usage designs.
+        </p>
+
+
     </main>
     <footer>
-
+        <p>Copyright &copy; Tricia Greenwood 2020 </p>
     </footer>
 </body>
 
