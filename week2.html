@@ -1,0 +1,288 @@
+<!--week one work and info wdd 330 mobile app pilot-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Programming ch.2, Arrays Logic and Loops ch.3, Functions ch.4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/maincss.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <p class="logo">Tricia Greenwood WDD 330</p>
+        <nav>
+            <ul id="menu" class="top">
+                <li><a href="index.html">Home</a></li>
+                <!--<li><a href="#">Topics</a>  use once I have navigation designed-->
+                <ul class="submenu">
+                    <li><a href="week1.html">Week 1</a></li>
+                    <li><a href="week2.html">Week 2</a></li>
+
+                </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Notes Week 2</h1>
+        <hr>
+        <h2>Comments, Syntax, Reserved Words</h2>
+        <p>Comments:
+            // short comment<br>
+            /*<br>
+            Multiple line comments<br>
+            */</p><br>
+
+        <p> Syntax:<br>
+            ; to end a line<br>
+            {} contain a block</p><br>
+
+        <p> Reserved words:<br>
+            abstract, await, boolean, break, byte, case, catch, char, class,
+            const, continue, debugger, default, delete, do, double, else, enum,
+            export, extends, false, final, finally, float, for, function, goto,
+            if, implements, import, in instanceof, int, interface, let, long,
+            native, new, null, package, private, protected, public, return,
+            short, static, super, switch, synchronized, this, throw, throws,
+            transient, true, try, typeof, var, volatile, void, while, with,
+            yield</p><br>
+
+        <p> not reserved, but should be:<br>
+            undefined, NaN, Infinity
+        </p>
+
+
+        <h4> Primitive data types:</h4>
+        <p>Ch 2” JavaScript has seven different data types. Six of them areprimitive data typesand are listed below:
+            <ul>
+                <li>• String</li>
+                <li> • Symbol (The symbol primitive data type was only introduced in ES6.)</li>
+                <li>• Number</li>
+                <li> • Boolean</li>
+                <li> • Undefined</li>
+                <li> • Null</li>
+            </ul>
+            Any value that isn’t one of the primitive data types listed above is an object. These include arrays,
+            functions and object literals, which will be discussed in later chapters.
+            JavaScript has a special operator called typeof for finding out the type of a value.”
+            Declaring and assigning:<br>
+            const in front of a variable makes it unchangeable const name = ‘Bob’; it wont be changed
+            let in front of a variable allows it to be changed let name = ‘joe’; allows the variable to be used again
+        </p>
+        <h4>Scope</h4>
+
+        <p> Global Scope can be seen outside of regular scope, not the best practice
+            Local scope: variable defined inside a scope {} will only be available inside that scope
+            Variable names “Constant and variable names can start with any upper or lower-case letter, an underscore, _
+            ,
+            or dollar character, $ . They can also contain numbers, but cannot start with them.”
+            Use camelCaseWhenNamingVariables</p>
+
+        <br>
+
+        <p>Direct Assignment and Assignment By Reference:<br>
+            Primitive changes change the variable directly</p><br>
+
+        <img src="images/primitivechange.png" alt="primitive change">
+
+        <h5>Non-prmitives reference the same object</h5>
+        <img src="images/nonprimitive.png" alt="nonprimitive change">
+        <p>Strings: characters inside’’ or “
+            Backslashes to escape functions</p>
+        <img src="images/backslashes.png" alt="backslashes">
+        <h5>String Properties and Methods</h5>
+        <p> ” Primitive data types and objects have properties and methods. Properties are information about the object
+            or value, while methods perform an action on the object or value ― either to change it or to tell us
+            something about it.”
+            To call a method use the . dot operator followed by the method name, and then parenthesis
+            Template Literals
+            Uses the backtic to ` contain strings that include ‘ or “</p>
+        <img src="images/templateliterals.png" alt="temp literals">
+
+        <h3>Symbols:</h3>
+        <p> “Symbols are the only primitives that don't have a literal form. The only way to create them is to use the
+            Symbol() function:
+            const uniqueID = Symbol();
+            It is recommended to add a description of the symbol inside the parentheses:
+            const uniqueID = Symbol('this is a unique ID');
+            Because symbols are primitive values, the typeof operator should return a type of 'symbol':
+            typeof uniqueID;
+            << 'symbol' “ </p>
+                <h3>SYMBOLS AND THEIR USES</h3>
+                <a href="https://www.sitepoint.com/es6-symbols-uses/">Uses of Symbols on Sitepoint</a>
+
+
+                <h3>NUMBERS: </h3>
+                <p>Integers or floating points Converting Numbers to Strings</p>
+
+                <img src="images/convrtnumberstostrings.png" alt="convert numbers to string">
+                <img src="images/string.png" alt="string">
+                <p>PARCING NUMBERS
+                    Converts a string back to a number</p>
+                <img src="images/convertstringbacktonumber.png" alt="convrt string back to numbers">
+
+                <p>parseInt()
+                    parseFloat() to a deimal</p>
+
+                <h3>BOOLEAN</h3>
+                <img src="images/boolean.png" alt="boolean">
+                <p>
+                    <h3>Chapter Summary ch 2</h3>
+                    <p>
+                        <ul>
+                            <li>Comments are ignored by the program, but make your program easier to read and
+                                understand</li>
+                            <li> Data types are the basic building blocks of all JavaScript programs.</li>
+                            <li> There are six primitive data types: strings, symbols, numbers, Booleans, undefined and
+                                null.</li>
+                            <li> Non-primitive data types, such as arrays, functions and objects, all have a type of
+                                'object'.</li>
+                            <li> Variables point to values stored in memory and are declared using the const or let
+                                keywords.</li>
+                            <li> Values are assigned to variables using the = operator.</li>
+                            <li> Strings and numbers have various properties and methods that provide information about
+                                them.</li>
+                            <li> Symbols are unique, immutable values.</li>
+                            <li> Boolean values are either true or false .</li>
+                            <li> There are only seven values that are false in JavaScript and these are known as
+                                'falsy' values.</li>
+                            <li> Data types can be converted into other data types.</li>
+                            <li> Type coercion is when JavaScript tries to convert a value into another data type in
+                                order to perform an operation.</li>
+                            <li> Logical operators can be used to check if compound statements are true or false.</li>
+                            <li> Values can be compared to see if they are equal, greater than or less than other
+                                values.</li>
+                        </ul>
+                    </p>
+
+                    <h2>CHAPTER 3</h2>
+
+                    <h4>ARRAY = ordered list of values held inside []</h4>
+                    <p> An empty array returns undefined<br>
+                        To add values to an array us = horse[1] = warmblood<br>
+                        Array literals are written indie the [] and don’t need to be individually assigned const<br>
+                        baseballTeams = [‘dodgers’, ‘angels’, ‘padres’]<br>
+                        Delete baseballTeams[2]; will make ‘angels’ become undefined<br></p>
+
+                    <img src="images/destructuringarrays.png" alt="destructuring arrays">
+
+                    <p> Values can be placed into a set using the add method:
+                        list.add(1);
+                        << Set { 1 } <br>
+                            Multiple items can be added to the set by repeating the add() method:<br>
+                            list.add(2).add(3).add(4);<br>
+                            << Set { 1, 2, 3, 4 }<br>
+                                If you try to add a value that is already
+                                contained in the set, then the operation is simply ignored:<br>
+                                list.add(1); << Set { 1, 2, 3, 4}<br>
+                                    Multiple values can be added to a set in one go by placing them inside an array that
+                                    is
+                                    provided as an argument:<br>
+                                    const numbers=new Set([1,2,3]); <br>
+                                    To see the contents of a set simply enter the name of the variable that refers to
+                                    it:<br>
+                                    numbers << Set { 1, 2, 3 } <br>
+                                        If any values are repeated in the array, then they will only appear once in the
+                                        set:<br>
+                                        const moreNumbers=new Set([7,7,7,7,7,8,8,8,9,9]);<br>
+                                        moreNumbers << Set {7,8,9}>br>
+                                            This gives a convenient way of eliminating any duplicate values from an
+                                            array in a single operation.</p>
+                    <br>
+                    <h3>LOGIC</h3>
+
+                    <img src="images/ternaryoperator.png" alt="ternary operator">
+
+
+                    <h2>Chapter Summary 3</h2>
+                    <p>
+                        <ul>
+                            <li> Arrays are an ordered list of values</li>
+                            <li> Multidimensional arrays are arrays that contain other arrays</li>
+                            <li> Arrays have lots of methods that can be used to manipulate items in the array
+                            </li>
+                            <li> Sets are new in ES6 and are ordered lists of non-duplicate values</li>
+                            <li> Maps are new in ES6 and are ordered lists of key-value pairs</li>
+                            <li> We can use an if and else statement to control the flow of code</li>
+                            <li> The switch statement can be used instead of multiple if and else statements
+                            </li>
+                            <li> A while loop and do ... while loop can be used to repeat a block of code while
+                                a
+                                condition is still true</li>
+                            <li> A for loop works in a similar way to a while loop, but has a different syntax
+                            </li>
+                            <li> A for-of loop can be used to iterate over an array</li>
+                            <li> Sets and maps are enumerable, so can also be looped over using a for-of loop
+                            </li>
+                        </ul>
+                    </p>
+
+                    <h3>FUNCTIONS</h3>
+                    function literal =
+                    function Declaration=function is defined and named and is a block containing the code
+                    Function spelling(){
+                    Console.log(‘spell correctly’);
+                    }
+                    function expressions
+                    This assigns and anonymous function because there is no name, but it is assigned to it’s
+                    variable.
+                    Const adios = function(){ <-no name given Console.log(‘adios amigos’); } Const adios=function bye(){
+                        <-function named bye and assigned to variable adios Console.log(‘adios amigos’); } FUNCTION ()
+                        CONSTRUCTORS Constructor=Function() Not recommended Invoking a Function=</p>
+
+                        <img src="images/parametersandarguments.png" alt="parameters and argumets">
+
+                        <p>Default parameters=The golden rule to remember here is
+                            to always put default parametersafterall the other parameters. Arrow functions slim down
+                            the parameters and function. Const square=x=>
+                            x*x;
+                            Use parenthesis for multiple parameters</p>
+                        <img src="images/functionhoisting.png" alt="hoisting">
+
+                        <h3>CALLBACKS = allow an unnamed parameter to be used in a function, just include it in
+                            the
+                            parenthesis</h3>
+
+                        <h3>Map()</h3>
+                        <img src="images/map.png" alt="map">
+                        <h3>FILTER() METHOD</h3>
+
+
+                        <h3>Chapter Summary ch 4</h3>
+                        <li> Functions are first-class objects that behave the same way as other values.</li>
+                        <li> Function literals can be defined using the function declaration, or by creating
+                            afunction expressionby assigning an anonymous function to a variable.</li>
+                        <li> All functions return a value. If this is not explicitly stated, the function will
+                            return undefined.</li>
+                        <li> A parameter is a value that is written in the parentheses of a function declaration
+                            and
+                            can be used like a variable inside the function’s body.</li>
+                        <li> An argument is a value that is provided to a function when it is invoked.</li>
+                        <li> The arguments variable is an array-like object that allows access to each argument
+                            provided to the function using index notation.</li>
+                        <li> The rest operator can be used to access multiple arguments as an array.</li>
+                        <li> Default arguments can be supplied to a function by assigning them to the
+                            parameters.
+                        </li>
+                        <li> Arrow functions are a new shorthand notation that can used for writing anonymous
+                            functions in ES6.</li>
+                        <li>Function declarations can be invoked before they are defined because they are
+                            hoisted to
+                            the top of the scope, but function expressions cannot be invoked until after they
+                            are
+                            defined.</li>
+                        <li> Acallbackis a function that is provided as an argument to another function.</li>
+
+                        W3schools
+                        <img src="images/keywords.png" alt="keywords">
+                </p>
+    </main>
+    <footer>
+        <p>Copyright &copy; Tricia Greenwood 2020 </p>
+    </footer>
+</body>
+
+</html>
