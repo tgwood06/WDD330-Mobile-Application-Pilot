@@ -33,6 +33,9 @@ header {
     background-color: burlywood;
 
 }
+p {
+    margin: 5px;
+}
 
 /*NAV*/
 .menu{

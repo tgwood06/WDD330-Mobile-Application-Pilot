@@ -1,0 +1,406 @@
+<!--week two work and info wdd 330 mobile app pilot-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Programming ch.2, Arrays Logic and Loops ch.3, Functions ch.4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/maincss.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <p class="logo">Tricia Greenwood WDD 330</p>
+        <nav>
+            <ul id="menu" class="top">
+                <li><a href="index.html">Home</a></li>
+                <!--<li><a href="#">Topics</a>  use once I have navigation designed-->
+                <ul class="submenu">
+                    <li><a href="week1.html">Week 1</a></li>
+                    <li><a href="week2.html">Week 2</a></li>
+                    <li><a href="week3.html">Week 3</a></li>
+
+                </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Notes Week 3</h1>
+        <hr>
+        <h2>Object methods, "this"</h2>
+
+
+        <a href="https://javascript.info/object-methods">JavaScript Info</a></li>
+        <p> Objects are usually created to represent entities of the real world, like users, orders and so on
+            And, in the real world, a user can act: select something from the shopping cart, login, logout etc.
+            METHOD SHORTHAND
+            <img src="images/methodshorthand.png" alt="method shorthand">
+
+            <p>To access the object, a method can use the this keyword.
+                The value of this is the object “before dot”, the one used to call the method.</p>
+
+
+            <h5>Example below</h5><br>
+
+
+
+            <p>let user = {<br>
+                name: "John",<br>
+                age: 30,<br>
+
+                sayHi() {<br>
+                // "this" is the "current object"<br>
+                alert(this.name);<br>
+                }<br>
+
+                };<br>
+
+                user.sayHi(); // John</p><br>
+
+
+
+            <p>>In JavaScript this is “free”, its value is evaluated at call-time and does not depend on where the
+                method
+                was declared, but rather on what object is “before the dot”.</p>
+
+            <h3> Summary</h3>
+            <ul>
+                <li> • Functions that are stored in object properties are called “methods”.</li>
+                <li> • Methods allow objects to “act” like object.doSomething().</li>
+                <li>• Methods can reference the object as this.</li>
+                <li>• The value of this is defined at run-time.</li>
+                <li> • When a function is declared, it may use this, but that this has no value until the function is
+                    called.</li>
+                <li> • A function can be copied between objects.</li>
+                <li> • When a function is called in the “method” syntax: object.method(), the value of this during the
+                    call is object.</li><br>
+                <p> Please note that arrow functions are special: they have no this. When this is accessed inside an
+                    arrow function, it is taken from outside.</p>
+            </ul>
+            <h2> Sitepoint</h2>
+            <h1>Ch5 OBJECTS</h1>
+
+            <p>“Everything in JavaScript is either one of the six primitive data types we met in Chapter 2 (strings,
+                numbers, booleans, symbols, undefined, and null) or an object”
+                Objects are: arrays, functions, Object literals, Adding properties to objects, Object methods, JSON,
+                Math object, Date object, RegExp object
+            </p>
+            <p>Objects are: arrays, functions, Object literals, Adding properties to objects, Object methods, JSON, Math
+                object,
+                Date object, RegExp object</p><br>
+
+            <h2>Object Literals</h2>
+            <p>Object: self-contained set of related values and functions. If a property’s value is a function, it in a
+                method.
+                : Objects are often used to keep any related information and functionality together in the same place.
+                For example, if you wrote functions that found the perimeter and area of a square, you might want to
+                group them together as methods of the same object that also included a length property.”
+                OBJECT LITERAL: an object created by wrapping all properties and methods in curly braces {}</p><br>
+            <p>Example from book<br>
+                const superman = {<br>
+                name: 'Superman',<br>
+                'real name': 'Clark Kent',<br>
+                height: 75,<br>
+                weight: 235,<br>
+                hero: true,<br>
+                villain: false,<br>
+                allies: ['Batman','Supergirl','Superboy'],<br>
+                fly() {<br>
+                return 'Up, up and away!';<br>
+                }<br>
+                };<br>
+                CREATING OBJECTS: “To create an object literal, simply enter a pair of curly braces. The following
+                example creates an empty object that is assigned to the variable spiderman :<br>
+                const spiderman = {};<br>
+                shorthand:<br>
+                const name = 'Iron Man';<br>
+                const realName = 'Tony Stark';<br>
+                // long way<br>
+                const ironMan = { name: name, realName: realName };<br>
+                // short ES6 way<br>
+                const ironMan = { name, realName };<br>
+                ACCESSING PROPERTIES: use dot notation ex superman.name or use brackets superman[‘name’]<br>
+                To call an object’s method we can also use dot or bracket notation. Calling a method is the same as
+                invoking a function, so parentheses need to be placed after the method name:superman.fly()<br>
+                <p>
+                    << 'Up, up and away!' <br>
+                        superman['fly']()<br>
+                        << 'Up, up and away!' <br>
+                            In operator checks to see if an operator has a particular property. <br>
+                            ‘city’ in superman;<br>
+                            <<false<br>
+                                Superman.city !== undefined;<br>
+                                <<false<br>
+                                    .hasOwnProperty(); will show what belongs to a particular object<br>
+                </p>
+
+                <h5>To find all the properties of an object use a for in loop</h5>
+
+                <p>To add a property superman.city = ‘Metropolis’; ((Metropolis (this adds to the list)<br>
+                    To change a property just assign it to the value of an object = superman[‘rel name’] = ‘Kal-El’;
+                    <<Kal-El<br>
+                        To remove an object use the delte operator ; delete superman.fly (true)</p><br>
+                <h3>OBJECTS CAN CONTAIN OTHER OBJECTS</h3>
+                <p> Nested objects:<br>
+                    const jla = {<br>
+                    superman: { realName: 'Clark Kent' },<br>
+                    batman: { realName: 'Bruce Wayne' },<br>
+                    wonderWoman: { realName: 'Diana Prince" },<br>
+                    flash: { realName: 'Barry Allen' },<br>
+                    aquaman: { realName: 'Arthur Curry' },<br>
+                    }
+                    The values in nested objects can be accessed by referencing each property name in order using either
+                    dot or bracket notation:
+                    jla.wonderWoman.realName<br>
+                    << "Diana Prince" <br>
+                        jla['flash']['realName']<br>
+                        << "Barry Allen" <br>
+                            You can even mix the different notations:<br>
+                            jla.aquaman['realName']<br>
+                            << "Arthur Curry" <br>
+                </p>
+                <h2>this</h2>
+                <p> “the keyword this refers to the object that it is within. It can be used inside methods to gain
+                    access to the object’s properties.”</p>
+                <h3>JSON</h3>
+                <p>“JSON is a string representation of the object literal notation that we have just seen. There are,
+                    however, a couple of key differences:</p>
+                <br>
+                <ol>
+                    <li> 1. Property names must be double-quoted</li>
+                    <li>2. Permitted values are double-quoted strings, numbers, true, false, null, arrays and objects
+                    </li>
+                    <li> 3. Functions are not permitted values</li>
+                </ol>
+                <h5>JSON.parse and Json.stringify</h5>
+
+                <h2>Math Object</h2>
+                <img src="images/mathobject.png" alt="math objects">
+                <p> Math.abs(5); absolute value<br>
+                    Math.ceil(4.3); rounding up to next integer<br>
+                    Math.floor(4.3) round down to next integer<br>
+                    Math.round(4.3); rounds to the nearest integer<br>
+                    <h4>Powers and Roots</h4><br>
+                    Math.exp<br>
+                    Math.pow<br>
+                    Math.sqrt<br>
+                    Math.cbrt<br>
+                    Math.hypot<br>
+                    Logarithmic Methods<br>
+                    Min ans max methods<br>
+                    Trigonomic functions<br>
+                    <h4>RANDOM NUMBERS</h4>
+                    <p>Math.random(); multiply this by a number to find anything from 0 – the number multiplied in the
+                        random numbers</p><br>
+                    <h4>THE DATE OBJECT</h4>
+                    <p>const today = new Date();<br>
+                        The variable today now points to a Date object. To see what the date is, we use the toString()
+                        method that all objects have:<br>
+                        today.toString();<br>
+                        << 'Tue Feb 14 2017 16:35:18 GMT+0000 (GMT)' <br>
+                            Getter/setter for dates<br>
+                            RegExp = regular expression can be used to search for patters ex words ending in ing
+                    </p><br>
+                    <h2>Chapter 5 Summary</h2>
+                    <ul>
+                        <li>• Objects are a collection of key-value pairs placed inside curly braces {}. </li>
+                        <li>• Objects have properties that can be any JavaScript value. If it’s a function, it’s known
+                            as amethod.</li>
+                        <li>• An object’s properties and methods can be accessed using either dot notation or square
+                            bracket notation.</li>
+                        <li>• Objects are mutable, which means their properties and methods can be changed or removed.
+                        </li>
+                        <li>• Objects can be used as parameters to functions, which allows arguments to be entered in
+                            any order, or omitted.</li>
+                        <li>• Nested objects can be created by placing objects inside objects.</li>
+                        <li>• JSON is a portable data format that uses JavaScript object literals to exchange
+                            information.</li>
+                        <li>• The Math object gives access to a number of mathematical constants.</li>
+                        <li>• The Math object can be used to perform mathematical calculations.</li>
+                        <li>• The Date object can be used to create date objects.</li>
+                        <li>• Once you’ve created a Date object, you can use the getter methods to access information
+                            about that date.</li>
+                        <li>• Once you’ve created a Date object, setter methods can be used to change information about
+                            that date.</li>
+                        <li>• The Regex object can be used to create regular expressions.</li>
+                    </ul>>
+                    <h1>CHAPTER 6<h1></h1>
+                        <h2>THE DOCUMENT OBJECT MODEL</h2>
+                        <p>DOM is like a network of connected nodes that form a tree like structure. </p>
+                        <img src="images/documentObjectModel.png" alt="object model">
+
+                        <h2>Getting elements</h2>
+
+                        <p>DOM allows us to see any element on a page. It will be either in a ode object, or node list.
+                            It is not an array.
+                            To make an array out of the list, use the method const imageArray =
+                            Array.from(document.image); or spread operator
+                            const imageArray = […document.images];</p>
+                        <h4>Node code</h4>
+
+                        <img src="images/nodecode.png" alt="node code">
+                        <p>Or use body.nodeName; to find out the name of the element</p>
+                        <img src="images/domshortcut.png" alt="dom shortcut"><br>
+                        <h2> MOST COMMON WAY TO GET AN ELEMENT BY ITS ID</h2>
+                        <p>const h1 = document.getElementById('title');<br>
+                            each id should have a different name.<br>
+                            Get Elements By Their Tag Name<br>
+                            getElementsByTagName() will return a live node list of all the elements with the tag name
+                            that is provided as an argument. For example, we can get all the list items (HTML tag of
+                            ) in the document using this code:<br>
+                            const listItems = document.getElementsByTagName('li');<br></p>
+
+                        <h3>Get Elements By Their Class Name</h3>
+                        <p>getElementsByClassName() will return a live node list of all elements that have the
+                        class name that is supplied as an argument. For example, we can return a collection of
+                        all elements with the class of 'hero' using the following code:</p>
+                        <p>const heroes = document.getElementsByClassName('hero');</p><br>
+                        <h3>Query Selectors</h3>
+                        <p>The document.querySelector() method allows you to use CSS notation to find
+                        thefirstelement in the document that matches that matches a CSS selector provided as an
+                        argument. If no elements match, it will return null .
+                        The document.querySelectorAll() method also uses CSS notation but returns a node list
+                        ofallthe elements in the document that match the CSS query selector. If no elements
+                        match, it will return an empty node list.</p>
+
+
+                        Getting an attribute using class, id, src, href etc
+                </p>
+                <img src="images/elements attributes.png" alt="element attributes"><br>
+                <p>Setting or changing element</p><br>
+                <img src="images/settingelement attributes.png" alt="setting element attributest"><br>
+                <p>CLASSLIST PROPERTY
+                    Add = wonderWoman.classList.add(‘warrior’);
+                    Same but add .remove to remove from classList
+                    TOGGLE
+                </p>
+                <img src="images/toggle.png" alt="toggle"><br>
+               <h2>CREATING DYNAMIC MARKUP</h2> 
+                    <h5>const flash = document.createElement('li');</h5>
+
+                    <h5>const flashText = document.createTextNode('Flash');</h5>
+
+                    <h5>flash.appendChild(flashText);</h5>
+
+                    <h5> heroes.insertBefore(aquaman,wonderWoman);</h5>
+
+                    <h3>inner.HTML</h3>
+                    <p> “It returns all the child elements of an element as a string of HTML. If an element contains lots of
+                    other elements, all the raw HTML is returned. In the following example, we can see all the HTML that
+                    is contained inside the ul> element with the id of roster :</p>
+                       <h6> heroes.innerHTML</h6>
+                        <p>" li class=\"hero\">Superman
+                            li class=\"vigilante hero\" id=\"bats\">Batman
+                            li class=\"hero\">Wonder Woman
+                            "</p><br>
+                            <p>The innerHTML property is also writable and can be used to place a chunk of HTML inside an
+                            element. This will replace all of a node’s children with the raw HTML contained in the
+                            string. This saves you having to create a new text node as it’s done automatically and
+                            inserted into the DOM. It’s also much quicker than using the standard DOM methods. For
+                            example, the heading text that we changed before could be changed in one line:
+                            h1.innerHTML = 'Suicide Squad';</p><br>
+                           <p>The power of the innerHTML property becomes even more apparent if you want to insert a large
+                            amount of HTML into the document. Instead of creating each element and text node
+                            individually, you can simply enter the raw HTML as a string. The relevant nodes will then be
+                            added to the DOM tree automatically. For example, we could change everything contained
+                            within the <ul> element:</p> 
+                                heroes.innerHTML = '<li>Harley Quinn</li>
+                                <li>Deadshot</li>
+                                <li>Killer Croc</li>
+                                <li>Enchantress</li>
+                                <li>Captain Boomerang</li>
+                                <li>Katana</li>
+                                <li>Slipknot</li>';
+                               <p>This will now remove all the child elements of the <ul> element and replace them with
+                                    the string of HTML that was provided, as shown in below.”</p> <br>
+
+                                  <h2> UPDATING CSS</h2> 
+                                    <p>No dashes allowed, use camelCase and replace the dash with a capital letter.<br>
+                                    const heroes = document.getElementById('roster');<br>
+                                    const superman = heroes.children[0];<br>
+                                    superman.style.border = "red 2px solid";</p>
+
+                                    <p>"red 2px solid" Use display to hide You can hide the superman element with the
+                                        following code: superman.style.display='none' ; //"none" Use block as well The
+                                        element can be made to 'reappear' by changing the display property back to block
+                                        : superman.style.display='block' ; // "block" Chapter 6 Summary • The Document
+                                        Object Model is a way of representing a page of HTML as a tree of nodes. • The
+                                        document.getElementById() , document.getElementsByClassName() ,
+                                        document.getElementsByTagNames() and document.querySelector() can be used to
+                                        access elements on a page. • The parentNode() , previousSibling() ,
+                                        nextSibling() , childNodes() and children() methods can be used to navigate
+                                        around the DOM tree. • An element’s attributes can be accessed using the
+                                        getAttribute() method, and updated using the setAttribute() method. • The
+                                        createElement() and createTextNode() methods can be used to create dynamic
+                                        markup on the fly. • Markup can be added to the page using the appendChild() and
+                                        insertBefore() methods. • Elements can be replaced using the replaceChild()
+                                        method, and removed using the removeChild() method. • The innerHTML property can
+                                        be used to insert raw HTML directly into the DOM. • The CSS properties of an
+                                        element can be changed by accessing the style property. CHAPTER 7 EVENTS Event
+                                        listeners check for an action, like an email coming in or a button click and
+                                        then alert you or take action. “JavaScript, on the other hand, uses
+                                        anon-blockingapproach that usesevent listenersto listen out for any clicks on
+                                        the page. Every time the page is clicked, a callback function will be called. So
+                                        the program can continue processing the rest of the code while it's waiting for
+                                        the click event to happen. The following code can be used to attach an event
+                                        listener to the document that fires when the user clicks anywhere on the page:”
+                                        document.body.addEventListener("click", doSomething); DO NOT use inline event
+                                        handlers EVENT LISTENERS “The addEventListener() method is called on a node
+                                        object, the node to which the event listener is being applied. For example, this
+                                        code will attach an event listener to the document’s body:
+                                        document.body.addEventListener('click',doSomething); The addEventListener()
+                                        method can also be called without a node, in which case it is applied to the
+                                        global object, usually the whole browser window. Its first parameter is the type
+                                        of event, and the second is a callback function that is invoked when the event
+                                        occurs. There is also a third parameter that we'll cover later in the chapter.”
+                                    </p> 
+                                        <img src="images/doSomething.png" alt="doSomething"><br>
+                                        <h3>Add script file to bring in Js</h3>
+                                            <h4>MOZILLA EVENT DIRECTORY</h4>
+                                            
+                                            <a href="https://developer.mozilla.org/en-US/docs/Web/Events">Mozilla Developer Events</a>
+                                            <h3>Mouse events</h3>
+                                            <p> const clickParagraph = document.getElementById('click');
+                                            clickParagraph.addEventListener('click',() => console.log('click') );
+                                            clickParagraph.addEventListener('mousedown',() => console.log('down') );
+                                            clickParagraph.addEventListener('mouseup',() => console.log('up') );
+
+                                            There is also the dblclick event, which occurs when the user doubleclicks on
+                                            the element to which the event listener is attached. To see an example of
+                                            this, we’ll attach an event listener to the second paragraph in our example
+                                            (with an ID of 'dblclick'). Add the following code to main.js :
+                                            const dblclickParagraph = document.getElementById('dblclick');
+                                            dblclickParagraph.addEventListener('dblclick', highlight);
+                                            function highlight(event){
+                                            event.target.classList.toggle('highlight');
+                                            }
+                                            KEYBOARD EVENTs
+                                            1. The keydown event occurs when a key is pressed and willcontinue to
+                                            occurif the key is held down.
+                                            2. The keypress event occurs after a keydown event but before a keyup event.
+                                            The keypress event only occurs for keys that produce character input (plus
+                                            the 'Delete' key). This means that it’s the most reliable way to find out
+                                            the character that was pressed on the keyboard.
+                                            3. The keyup event occurs when a key is released.
+                                            To understand the differences in these events, it is important to
+                                            distinguish between a physicalkeyon the keyboard and acharacterthat appears
+                                            on the screen. The keydown event is the action of pressing a key, whereas
+                                            the keypress event is the action of a character being typed on the screen.</p>
+                                            <h5>Modifier Keys =</h5>
+
+                                            <h5>TOUCH EVENTS = </h5>
+                                        <img src="images/swiping.png" alt="doSomething"><br>
+                                        <p>REMOVE event listeners with removeEventListener()
+                                            Propagation?????
+                                        </p>
+
+    </main>
+    <footer>
+        <p>Copyright &copy; Tricia Greenwood 2020 </p>
+    </footer>
+</body>
+
+</html>
