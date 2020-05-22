@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Basics</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/maincss.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <p class="logo">Tricia Greenwood WDD 330</p>
+        <nav>
+            <ul id="menu" class="top">
+                <li><a href="index.html">Home</a></li>
+                <!--<li><a href="#">Topics</a>  use once I have navigation designed-->
+                <ul class="sub">
+                    <li><a href="week1.html">Week 1</a></li>
+                    <li><a href="week2.html">Week 2</a></li>
+                    <li><a href="week3.html">Week 3</a></li>
+                    <li><a href="week4.html">Week 4</a></li>
+                    <li><a href="week5.html">Week 5</a></li>
+
+                </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Notes Week 5</h1>
+        <hr>
+<h2>Ch 10 Testing and Debugging</h2>
+
+<h3>FORMS  Sitepoint :”JavaScript: novice to ninja”</h3>
+ 
+    <h4>Errors, Exceptions and Warnings</h4>
+   <p>•	System error ― there’s a problem with the system or external devices with which the program is interacting.<br>
+    •	Programmer error ― the program contains incorrect syntax or faulty logic; it could even be as simple as a typo.<br>
+    •	User error ― the user has entered data incorrectly, which the program is unable to handle.</p> <br>
+   <p> Exceptions: error that allows the program to handle the error, sometimes with an error code<br>
+    Stack Traces: a group or list of errors that help follow the trail to the error. <br>
+    Warnings: code error that isn’t big enough to stop the program, but may cause it to run incorrectly<br>
+    Testing and debugging are important during development because they need to happen in order to fix issues before production.<br>
+</p>
+    <h5>Strict Mode: operates code to find errors. Add ‘use strict’; to first line of code</h5><br>
+   <h3> Debugging in the browser</h3>
+   <h5>Use breakpoints to watch program run</h5> 
+   <h5> Use alert() method to stop a program from running, ex alert(age); and will stop </h5> 
+   <h5>  Debugging with the console: console.log() or console.trace()</h5> 
+   <h5>  Debugging Tools;</h5> 
+   <h5>  Use browsers</h5> 
+   <h5>  Using keyword debugger before where you want it checked will show an error</h5> 
+  <h3>  Error Objects</h3>
+   <p> “•  EvalError is not used in the current ECMAScript specification and only retained for backwards compatibility. It was used to identify errors when using the global eval() function.<br>
+    •   RangeError is thrown when a number is outside an allowable range of values.<br>
+    •   ReferenceError is thrown when a reference is made to an item that doesn’t exist. For example, calling a function that hasn't been defined.<br>
+    •   SyntaxError is thrown when there’s an error in the code’s syntax.<br>
+    •   TypeError is thrown when there’s an error in the type of value used; for example, a string is used when a number is expected.<br>
+    •   URIError is thrown when there’s a problem encoding or decoding the URI.<br>
+    •   InternalError is a non-standard error that is thrown when an error occurs in the JavaScript engine. A common cause of this too much recursion.<br>
+</p>
+    <h3>“safe errors</h3>
+  <p> 
+    •	“The name property returns the name of the error constructor function used as a string, such as 'Error' or 'ReferenceError'.<br>
+    •	The message property returns a description of the error and should be provided as an argument to the Error constructor function.<br>
+    •	The stack property will return a stack trace for that error. This is a non-standard property and it’s recommended that it is not safe to use in production sites.”<br>
+</p> 
+   <h4> Try, catch, and finally: these will run code inside their block and then catch any errors</h4>
+    <img src="images/trycatchfinally.png" alt="try catch finally">    
+ 
+ <p>
+    <h4>Chapter 10 Summary</h4>
+    <li>Bugs are unavoidable in code, and it’s best to find them early rather than later.</li>
+    <li>JavaScript can be put into strict mode using the string "use strict" . This can be used in a whole file or just a single function.</li>
+    <li>Linting tools can be used to ensure your code follows good practice and conventions.
+    <li>Feature detection can check whether a method is supported before calling it, helping to avoid an exception being thrown.</li>
+    <li>The console and browser’s built-in debugging tool can be used to interactively find and fix bugs in code.</li>
+    <li>Exceptions can be thrown using the throw statement.</li>
+    <li>An error object is created when an exception occurs.</li>
+    <li>Any code placed inside a try block will pass any error objects to a catch block when an exception occurs. Any code inside a finally block will run if an exception does or does not occur.</li>
+    <li>Test-driven development is the practice of writing tests that fail, then writing the code that passes the test, then refactoring the code every time a new feature is implemented.</li>
+    <li>The Jest framework can be used to test your code.</li>
+    </p>
+<button type='reset'>Reset</button>
+ <button type='submit'>Submit</button>
+<script src='main.js'></script>
+    </main>
+    <footer>
+        <p>Copyright &copy; Tricia Greenwood 2020 </p>
+    </footer>
+</body>
+
+</html>
